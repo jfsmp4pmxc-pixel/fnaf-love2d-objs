@@ -5,7 +5,6 @@ local speed = 10
 local trangthai = 0
 
 function love.load()
-    love.graphics.print("hello w")
 end
 
 function love.update(dt) -- hàm cập nhật
@@ -28,6 +27,9 @@ function love.update(dt) -- hàm cập nhật
 end
 
 function love.draw() -- hàm vẽ
+
+    love.graphics.setColor(0, 1, 0.7)
+    love.graphics.print("hello world!!!", 0, 0)
 
     love.graphics.setColor(0.7, 0.1, 0.9)
     love.graphics.circle("fill", x, y, 50)
