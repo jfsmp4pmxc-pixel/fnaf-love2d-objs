@@ -13,6 +13,8 @@ function love.update(dt)
    end
 
     y = y + 10
+
+   print(y)
 end
 
 function love.draw()
