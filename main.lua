@@ -1,9 +1,18 @@
-local x = 0
+local x = 200
 local y = 0
-
+local i = 0
 
 function love.load()
     print("hello world!!!")
+end
+
+function love.update(dt)
+    
+   if y > 700 then
+        y = 0
+   end
+
+    y = y + 10
 end
 
 function love.draw()
