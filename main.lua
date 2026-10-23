@@ -12,12 +12,11 @@ function love.update(dt)
         y = 0
    end
 
-    y = y + 10
-
-   print(y)
+    y = y + 5
 end
 
 function love.draw()
+    love.graphics.c
     love.graphics.circle("fill", x, y, 50)
     -- love.graphics.clear() --
 end
