@@ -9,6 +9,12 @@ local lg = love.graphics
 local screenX, screenY, screenWidth, screenHeight = love.window.getSafeArea()
 
 function love.load()
+
+    local success = love.window.setMode(1920, 1080, {
+        resizable = true,
+        vsync = 1 -- Bật vsync để chống xé hình
+    })
+
   local fontSize = 32
   if screenHeight < 500 or screenWidth < 500 then
      fontSize = 16
