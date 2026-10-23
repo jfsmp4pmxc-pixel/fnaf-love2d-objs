@@ -16,7 +16,8 @@ function love.update(dt)
 end
 
 function love.draw()
-    love.graphics.c
+
+    love.graphics.setColor(0, 0.4, 0.7)
     love.graphics.circle("fill", x, y, 50)
     -- love.graphics.clear() --
 end
