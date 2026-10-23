@@ -1,19 +1,26 @@
--- Trong file conf.lua
-function love.conf(t)
-    -- Đặt độ phân giải cửa sổ là 1280x720
-    t.window.width = 1280
-    t.window.height = 720
+-- Love2D 
+local x = 200
+local y = 0
+local i = 0
+
+function love.load()
+    print("hello world!!!")
 end
 
--- function love.load()
-    -- Chuyển sang chế độ cửa sổ 1920x1080 và có thể phóng to
-    -- local success = love.window.setMode(1920, 1080, {
-        -- resizable = true,
-        -- vsync = 1 -- Bật vsync để chống xé hình
---    })
--- end
+function love.update(dt)
+    
+   if y > 700 then
+        y = 0
+   end
+
+    y = y + 10
+
+   print(y)
+    y = y + 5
+end
 
 function love.draw()
-    love.graphics.setColor(1, 0, 0)
-    love.graphics.circle("fill", 100, 100, 50)
+    love.graphics.c
+    love.graphics.circle("fill", x, y, 50)
+    -- love.graphics.clear() --
 end
