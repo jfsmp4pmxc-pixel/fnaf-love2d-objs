@@ -1,26 +1,25 @@
--- Love2D 
 local x = 200
 local y = 0
-local i = 0
+local speed = 10
+
+local trangthai = 0
 
 function love.load()
-    print("hello world!!!")
 end
 
-function love.update(dt)
+function love.update(dt) -- hàm cập nhật
     
    if y > 700 then
-        y = 0
+        trangthai = 1
    end
 
-    y = y + 10
+   if trangthai == 1
 
-   print(y)
-    y = y + 5
+    y = y + speed
 end
 
-function love.draw()
-    love.graphics.c
+function love.draw() -- hàm vẽ
+    love.graphics.setColor(0.7, 0.1, 0.9)
     love.graphics.circle("fill", x, y, 50)
     -- love.graphics.clear() --
 end
