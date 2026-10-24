@@ -14,7 +14,18 @@ end
 
 local Ball = class()
 
--- 
+-- đối tượng Ball --
+function Ball:init(x, y, color)
+    self.x = x 
+    self.y = y
+    self.r = r 
+    self.color = color
+end
+
+function Ball:draw()
+    love.graphics.setColor(self.color)
+    love.graphics.circle("fill", self.x, self.y, self.r)
+end
 
 -- hàm thiết lập game --
 function love.load()
@@ -26,4 +37,5 @@ end
 
 -- hàm vẽ --
 function love.draw() 
+    Ball(100, 100, 1)
 end
