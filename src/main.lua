@@ -1,4 +1,3 @@
--- vùng khai báo biến --
 
 local function class(parent)
     local cls = {}
@@ -15,7 +14,7 @@ end
 local Ball = class()
 
 -- đối tượng Ball --
-function Ball:init(x, y, color)
+function Ball:init(x, y, r, color)
     self.x = x 
     self.y = y
     self.r = r 
@@ -25,10 +24,13 @@ end
 function Ball:draw()
     love.graphics.setColor(self.color)
     love.graphics.circle("fill", self.x, self.y, self.r)
+    love.graphics.setColor(1, 1, 1)
 end
 
+local ball
 -- hàm thiết lập game --
 function love.load()
+    ball = Ball:new(100, 100, 50 {1, 0, 0})
 end
 
 -- hàm cập nhật game --
@@ -37,5 +39,5 @@ end
 
 -- hàm vẽ --
 function love.draw() 
-    Ball(100, 100, 1)
+    ball.dr
 end
