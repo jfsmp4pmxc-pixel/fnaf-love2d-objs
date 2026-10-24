@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 -- khai báo biến --
 local x = 200
 local y = 0
