@@ -10,6 +10,9 @@ end
 -- hàm cập nhật --
 function love.update()
     y = y + v
+
+    if y = 500 then
+        y 
 end
 
 -- hàm vẽ --
