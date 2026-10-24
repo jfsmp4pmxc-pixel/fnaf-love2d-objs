@@ -9,10 +9,16 @@ end
 
 -- hàm cập nhật --
 function love.update()
+     -- prototype --
     y = y + v
 
-    if y = 500 then
-        y 
+    if y > 500 then
+        y = 500
+    end
+     ---------------
+
+    
+
 end
 
 -- hàm vẽ --
