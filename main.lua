@@ -29,7 +29,7 @@ end
 function love.draw() -- hàm vẽ
 
     love.graphics.setColor(0, 1, 0.7)
-    love.graphics.print("hello world!!!", 0, 0)
+    love.graphics.print("\n\n hello world!!!", 0, 0)
 
     love.graphics.setColor(0.7, 0.1, 0.9)
     love.graphics.circle("fill", x, y, 50)
