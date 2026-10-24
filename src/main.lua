@@ -1,44 +1,12 @@
+-- khai báo biến --
 
-local function class(parent)
-    local cls = {}
-    cls.__index = cls
-    if parent then setmetatable(cls, {__index = parent}) end
-    cls.new = function(...)
-        local obj = setmetatable({}, cls)
-        if obj.init then obj:init(...) end
-        return obj
-    end
-    return cls
-end
-
-local Ball = class()
-
--- đối tượng Ball --
-function Ball:init(x, y, r, g, b, ra)
-    self.x = x 
-    self.y = y
-    self.ra = ra 
-    self.color = {r, g, b}
-end
-
-function Ball:draw()
-    love.graphics.setColor(self.color[1], self.color[2], self.color[3])
-    love.graphics.circle("fill", self.x, self.y, self.ra)
-    love.graphics.setColor(1, 1, 1)
-end
-
-local ball
-local color = {1, 0, 0}
--- hàm thiết lập game --
+-- hàm thiết lập --
 function love.load()
-    ball = Ball:new(100, 100, 1, 0, 0, 50)
 end
 
--- hàm cập nhật game --
-function love.update(dt)
+-- hàm cập nhật --
+function love.update()
 end
 
 -- hàm vẽ --
-function love.draw() 
-    ball:draw()
-end
+function love
