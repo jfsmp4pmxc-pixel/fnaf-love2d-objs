@@ -1,6 +1,6 @@
 x = 200
 y = 0
-v = 2000
+v = 10
 diem = 0
 soLanThucThi = 0
 soLanTrongGiay = 0
@@ -11,11 +11,11 @@ function love.load()
     mocThoiGian = love.timer.getTime()
 end
 
-function love.update()
+function love.update(dt)
     y = y + v
 
     if y > 700 then
-        v = -2000
+        v = -10
     end
 
     if y > 700 then
@@ -24,7 +24,7 @@ function love.update()
 
 
     if y == 0 then
-        v = 2000
+        v = 10
     end
 
     if y == 0 then
@@ -47,16 +47,17 @@ end
 
 function love.draw()
 
-    love.graphics.setColor(1, 0, 0)
-    love.graphics.circle("fill", x, y, 50)
+    
 
     love.graphics.setColor(0, 1, 0)
     love.graphics.print(diem, 100, 100)
 
+    love.graphics.circle("fill", x, y, 50)
+
+    
+
     local fps = love.timer.getFPS()
     love.graphics.print("FPS: " .. tostring(fps), 10, 30)
-
-    love.graphics.print("UPS: " .. soLanTrongGiay, 10, 50)
 
 end
 
