@@ -1,6 +1,6 @@
 x = 200
 y = 0
-v = 10
+v = 4
 diem = 0
 soLanThucThi = 0
 soLanTrongGiay = 0
@@ -15,19 +15,12 @@ function love.update(dt)
     y = y + v
 
     if y > 700 then
-        v = -10
-    end
-
-    if y > 700 then
+        v = -4
         diem = diem + 1
     end
 
-
     if y == 0 then
-        v = 10
-    end
-
-    if y == 0 then
+        v = 4
         diem = diem + 1
     end
 
@@ -50,9 +43,9 @@ function love.draw()
     
 
     love.graphics.setColor(0, 1, 0)
-    love.graphics.print(diem, 100, 100)
+    love.graphics.print("point: " .. tostring(diem), 100, 100)
 
-    love.graphics.circle("fill", x, y, 50)
+    love.graphics.circle("fill", x, y, 1)
 
     
 
