@@ -1,6 +1,6 @@
 x = 200
 y = 0
-v = 50
+v = 200
 diem = 0
 
 function love.load()
@@ -11,7 +11,7 @@ function love.update()
     y = y + v
 
     if y > 700 then
-        v = -50
+        v = -200
     end
 
     if y > 700 then
@@ -20,11 +20,16 @@ function love.update()
 
 
     if y == 0 then
-        v = 50
+        v = 200
     end
 
     if y == 0 then
-        v
+        diem = diem + 1
+    end
+end
+
+function love.conf(t)
+    t.window.vsync = 0 
 end
 
 function love.draw()
@@ -35,7 +40,11 @@ function love.draw()
     love.graphics.setColor(0, 1, 0)
     love.graphics.print(diem, 100, 100)
 
+    local fps = love.timer.getFPS()
+    love.graphics.print("FPS: " .. tostring(fps), 10, 30)
+
 end
+
 
 
 
